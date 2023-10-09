@@ -25,9 +25,7 @@
         min-height: 10vh;
         object-fit: cover;
     }
-    .logo:hover {
-        animation: bounceAnimation 0.5s infinite;
-    }
+
     .dashboard {
         display: grid;
         grid-template-rows: 1fr auto;
