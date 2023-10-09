@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+
+<body>
+    <section>
+        <form>
+            <h1>Sign Up</h1>
+            <div class="inputbox">
+                <input type="username" required>
+                <label for="">Username</label>
+            </div>
+            <div class="inputbox">
+                <input type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" required>
+                <label for="">Confirm Password</label>
+            </div>
+            <div class="forget">
+                <label for=""><input type="checkbox">Accept the Terms and Conditions </label>
+            </div>
+            <button (click)="navigateToDashboard2()">Sign Up</button>
+            <div class="register">
+                <p>Already have an account? <a routerLink="/login">Sign In</a></p>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

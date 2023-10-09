@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    float: right;
+    padding-right: 5%;
+    padding-top: 5px;
+    background-color: #3d474e;
+}
+
+.username {
+    transition: all .3 ease-in;
+}
+
+.username a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 4px 5px 4px rgba(0, 0, 0, 0.3);
+    color: #F0F5F9;
+}
+
+.username img {
+    display: block;
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: solid 2px #393646;
+    margin: 0 auto;
+    transform: all 0.3s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+.username a:hover {
+    animation: bounce .5s infinite;
+    cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="sidecontainer">
+        <div class="logo .container-fluid">
+            <img src="assets/Bryan.png" alt="img">
+        </div>
+        <div class="dashboard">
+            <div>
+                <ul>
+                    <li>
+                        <a routerLink="manage/dashboard"><span class="material-symbols-outlined">Dashboard</span> Dashboard</a>
+                    </li>
+                    <li>
+                        <a routerLink="manage/students"> <span class="material-symbols-outlined">Group</span> Students</a>
+                    </li>
+                    <li>
+                        <a routerLink="manage/teachers"> <span class="material-symbols-outlined">Group</span> Teachers</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a routerLink=""><span class="material-symbols-outlined">Settings</span> Settings</a>
+                    </li>
+                    <li>
+                        <a routerLink="/login"> <span class="material-symbols-outlined">Logout</span> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
