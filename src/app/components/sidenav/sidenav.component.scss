@@ -55,6 +55,13 @@
         border: solid 1px #F0F5F9;
         border-radius: 2px;
     }
+      .dashboard a:active,
+    a:focus {
+        animation: bounceAnimation 0.5s infinite;
+        background-color: #52616B;
+        border: solid 1px #F0F5F9;
+        border-radius: 2px;
+    }
     .dashboard span {
         padding-right: 20px;
         white-space: nowrap;
@@ -120,6 +127,12 @@
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;
     }
+      .dashboard a:active,
+    a:focus {
+        animation: bounceAnimation 0.5s infinite;
+        background-color: #52616B;
+        border-radius: 2px;
+    }
     .dashboard span {
         padding-right: 20px;
         white-space: nowrap;
@@ -184,6 +197,12 @@
     .dashboard a:hover {
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;
+    }
+   .dashboard a:active,
+    a:focus {
+        animation: bounceAnimation 0.5s infinite;
+        background-color: #52616B;
+        border-radius: 2px;
     }
     .dashboard span {
         padding-right: 20px;
