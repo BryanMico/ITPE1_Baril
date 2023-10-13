@@ -5,11 +5,56 @@
 }
 
 body {
-    display: flex;
-    float: right;
-    padding-right: 5%;
-    padding-top: 5px;
     background-color: #3d474e;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headcontainer {
+    display: flex;
+    margin-right: 2%;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    margin-left: 2%;
+    margin-top: 5px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.search-container span:hover {
+    animation: bounce .5s infinite;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button i {
+    color: #333;
+    font-size: 18px;
 }
 
 .username {
