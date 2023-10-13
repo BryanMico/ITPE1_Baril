@@ -15,14 +15,17 @@
         display: grid;
         grid-template-columns: 1fr;
     }
-    .logo {
-        margin: 0 auto;
-        height: 8vh;
+      .logo {
+        display: flex;
+        width: 220px;
+        height: 10vh;
+        margin-left: 10px;
         background-color: #1E2022;
+        overflow: hidden;
     }
     .logo img {
-        max-width: 100%;
-        min-height: 10vh;
+        min-width: 100%;
+        min-height: 100%;
         object-fit: cover;
     }
 
