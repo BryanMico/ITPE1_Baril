@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+.btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-self: center;
+}
+
+.btnContainer button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #52616B;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.btnContainer button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.arrow {
+    font-weight: bold;
+}

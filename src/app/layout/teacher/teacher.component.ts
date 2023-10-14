@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { teachers_Data } from 'src/sharedData/teachersData';
 
 @Component({
   selector: 'app-teacher',
@@ -7,7 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeacherComponent implements OnInit {
 
-  constructor() { }
+  teachersData = teachers_Data;
+  currentTeacherIndex = 0;
+  currentTeacher = this.teachersData[this.currentTeacherIndex];
+
+  nextTeacher() {
+    this.currentTeacherIndex++;
+    if (this.currentTeacherIndex >= this.teachersData.length) {
+      this.currentTeacherIndex = 0;
+    }
+    this.currentTeacher = this.teachersData[this.currentTeacherIndex];
+  }
+  prevTeacher() {
+    this.currentTeacherIndex--;
+    if (this.currentTeacherIndex >= this.teachersData.length) {
+      this.currentTeacherIndex = 0;
+    }
+    this.currentTeacher = this.teachersData[this.currentTeacherIndex];
+  }
 
   ngOnInit(): void {
   }

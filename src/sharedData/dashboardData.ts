@@ -1,22 +1,22 @@
 export const cardData = [
     {
         title: "Total Students",
-        value: 300,
+        value: 7,
         content: "Total population of Students"
     },
     {
         title: "Total Teachers",
-        value: 70,
+        value: 3,
         content: "Total population of Teachers"
     },
     {
         title: "Total Users",
-        value: 370,
+        value: 10,
         content: "Total population of Users"
     },
     {
         title: "Total Subjects",
-        value: 10,
+        value: 3,
         content: "Total number of Subjects"
     },
 

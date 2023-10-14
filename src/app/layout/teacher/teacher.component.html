@@ -1,1 +1,15 @@
-<p>teacher works!</p>
+<div class="container">
+    <h1>Teachers</h1>
+    <div class="cards">
+        <app-table-teachers teachersImg={{currentTeacher.teachersImg}} teacherName={{currentTeacher.teacherName}} Subject={{currentTeacher.Subject}} teachersID={{currentTeacher.teachersID}}>
+        </app-table-teachers>
+    </div>
+    <div class="btnContainer">
+        <button class="btnNext" (click)="prevTeacher()"><span class="material-symbols-outlined">
+            arrow_back_ios
+            </span></button>
+        <button class="btnPrev" (click)="nextTeacher()"><span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span></button>
+    </div>
+</div>

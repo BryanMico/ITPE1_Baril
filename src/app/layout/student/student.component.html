@@ -1,2 +1,15 @@
-<p>student works!</p>
-<app-button text="Student Button" btnClass="btn btn-warning"></app-button>
+<div class="container">
+    <h1>Students</h1>
+    <div class="cards">
+        <app-table studentImg={{currentStudent.studentImg}} Name={{currentStudent.Name}} Course={{currentStudent.Course}} studentID={{currentStudent.studentID}}>
+        </app-table>
+    </div>
+    <div class="btnContainer">
+        <button class="btnNext" (click)="prevStudent()"><span class="material-symbols-outlined">
+            arrow_back_ios
+            </span></button>
+        <button class="btnPrev" (click)="nextStudent()"><span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span></button>
+    </div>
+</div>
