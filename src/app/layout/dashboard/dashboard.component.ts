@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { cardData } from 'src/sharedData/dashboardData';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
-  yourNameProperty: string = 'Bryan Mico V. Baril';
-  yourGithubProperty: string = 'https://github.com/BryanMico';
+  card_data = cardData;
+  ngOnInit(): void {
+    console.log(this.card_data)
+  }
 
 }

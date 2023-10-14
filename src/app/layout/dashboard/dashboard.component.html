@@ -1,1 +1,9 @@
-<app-cards [name]="yourNameProperty" [github]="yourGithubProperty"></app-cards>
+<div class="container">
+    <h1>Dashboard</h1>
+    <p class="para1">Overview</p>
+    <div class="cards">
+        <app-cards *ngFor="let item of card_data" title={{item.title}} content={{item.content}} value={{item.value}}>
+        </app-cards>
+    </div>
+
+</div>
