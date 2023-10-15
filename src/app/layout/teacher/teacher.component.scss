@@ -4,16 +4,11 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.btnNext {
-    position: absolute;
-    top: 50%;
-    right: 65%;
-}
-
-.btnPrev {
-    position: absolute;
-    top: 50%;
-    right: 16%;
+.btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .btnContainer button {

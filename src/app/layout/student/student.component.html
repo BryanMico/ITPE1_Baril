@@ -1,8 +1,10 @@
 <div class="container">
     <h1>Students</h1>
     <div class="cards">
-        <app-table studentImg={{currentStudent.studentImg}} Name={{currentStudent.Name}} Course={{currentStudent.Course}} studentID={{currentStudent.studentID}}>
-        </app-table>
+        <div class="cardcontainer">
+            <app-table studentImg={{currentStudent.studentImg}} Name={{currentStudent.Name}} Course={{currentStudent.Course}} studentID={{currentStudent.studentID}}>
+            </app-table>
+        </div>
         <div class="btnContainer">
             <button class="btnNext" (click)="prevStudent()"><span class="material-symbols-outlined">
                 arrow_back_ios
