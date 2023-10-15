@@ -1,13 +1,19 @@
 h1 {
     text-align: center;
+    color: #1E2022;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.btnContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    justify-self: center;
+.btnNext {
+    position: absolute;
+    top: 50%;
+    right: 65%;
+}
+
+.btnPrev {
+    position: absolute;
+    top: 50%;
+    right: 16%;
 }
 
 .btnContainer button {

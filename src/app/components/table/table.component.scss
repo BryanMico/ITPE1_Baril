@@ -17,6 +17,13 @@
             font-family: 'Times new roman', sans-serif;
         }
         
+        .card header {
+            width: 100%;
+            background-image: radial-gradient(ellipse at top left, #1E2022, #C9D6DF);
+            min-height: calc(10px + 10vw);
+            transition: box-shadow 0.3s ease;
+        }
+        
         .img {
             display: flex;
             justify-content: center;
@@ -46,7 +53,7 @@
         }
         
         .info {
-            margin-top: 3%;
+            margin-top: 10%;
         }
         
         .table {
@@ -59,4 +66,19 @@
             padding: 20px;
             box-shadow: 2px 5px 8px 0px #1E2022;
             font-family: 'Times new roman', sans-serif;
+        }
+        
+        .card .colscontainer .leftcol {
+            padding: 25px 20px;
+            text-align: center;
+            max-width: 350px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .card .colscontainer .leftcol .imgcontainer {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
         }
