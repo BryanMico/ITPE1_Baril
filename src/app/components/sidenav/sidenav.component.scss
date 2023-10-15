@@ -15,7 +15,7 @@
         display: grid;
         grid-template-columns: 1fr;
     }
-      .logo {
+    .logo {
         display: flex;
         width: 220px;
         height: 10vh;
@@ -28,13 +28,14 @@
         min-height: 100%;
         object-fit: cover;
     }
-
     .dashboard {
         display: grid;
         grid-template-rows: 1fr auto;
         background-color: #1E2022;
         grid-row: span 2;
         margin: 10px;
+        position: sticky;
+        top: 0px;
     }
     .dashboard a {
         display: flex;
@@ -58,7 +59,7 @@
         border: solid 1px #F0F5F9;
         border-radius: 2px;
     }
-      .dashboard a:active,
+    .dashboard a:active,
     a:focus {
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;
@@ -130,7 +131,7 @@
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;
     }
-      .dashboard a:active,
+    .dashboard a:active,
     a:focus {
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;
@@ -201,7 +202,7 @@
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;
     }
-   .dashboard a:active,
+    .dashboard a:active,
     a:focus {
         animation: bounceAnimation 0.5s infinite;
         background-color: #52616B;

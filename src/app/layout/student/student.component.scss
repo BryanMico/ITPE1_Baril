@@ -33,8 +33,35 @@ h1 {
     font-weight: bold;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.cards {
+    width: 50%;
+}
+
 .table {
     background-color: #52616B;
-    overflow: hidden;
     margin: 10px;
+    height: 70vh;
+    flex: 1;
+    border-radius: 20px;
+    border: solid 2px #1E2022;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-container {
+    overflow: hidden;
+    height: 100%;
+}
+
+.table:hover .scroll-container {
+    overflow: auto;
 }

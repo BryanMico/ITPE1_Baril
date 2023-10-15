@@ -1,17 +1,23 @@
+<h1>
+    Teachers</h1>
 <div class="container">
-    <h1>Teachers</h1>
     <div class="cards">
-        <app-table-teachers teachersImg={{currentTeacher.teachersImg}} teacherName={{currentTeacher.teacherName}} Subject={{currentTeacher.Subject}} teachersID={{currentTeacher.teachersID}}>
-        </app-table-teachers>
-    </div>
-    <div class="btnContainer">
-        <button class="btnNext" (click)="prevTeacher()"><span class="material-symbols-outlined">
-            arrow_back_ios
-            </span></button>
-        <button class="btnPrev" (click)="nextTeacher()"><span class="material-symbols-outlined">
-            arrow_forward_ios
-            </span></button>
+        <div class="cardcontainer">
+            <app-table-teachers teachersImg={{currentTeacher.teachersImg}} teacherName={{currentTeacher.teacherName}} Subject={{currentTeacher.Subject}} teachersID={{currentTeacher.teachersID}}>
+            </app-table-teachers>
+        </div>
+        <div class="btnContainer">
+            <button class="btnNext" (click)="prevTeacher()"><span class="material-symbols-outlined">
+                arrow_back_ios
+                </span></button>
+            <button class="btnPrev" (click)="nextTeacher()"><span class="material-symbols-outlined">
+                arrow_forward_ios
+                </span></button>
+        </div>
     </div>
     <div class="table">
-        <app-tableteachers2 *ngFor="let item of teachersData" teachersImg={{item.teachersImg}} teacherName={{item.teacherName}}> </app-tableteachers2>
+        <div class="scroll-container">
+            <app-tableteachers2 *ngFor="let item of teachersData" teachersImg={{item.teachersImg}} teacherName={{item.teacherName}}> </app-tableteachers2>
+        </div>
     </div>
+</div>

@@ -1,5 +1,5 @@
+<h1>Students</h1>
 <div class="container">
-    <h1>Students</h1>
     <div class="cards">
         <div class="cardcontainer">
             <app-table studentImg={{currentStudent.studentImg}} Name={{currentStudent.Name}} Course={{currentStudent.Course}} studentID={{currentStudent.studentID}}>
@@ -15,7 +15,8 @@
         </div>
     </div>
     <div class="table">
-        <app-tablestudent *ngFor="let item of studentData" studentImg={{item.studentImg}} Name={{item.Name}}> </app-tablestudent>
+        <div class="scroll-container">
+            <app-tablestudent *ngFor="let item of studentData" studentImg={{item.studentImg}} Name={{item.Name}}> </app-tablestudent>
+        </div>
     </div>
-
 </div>
