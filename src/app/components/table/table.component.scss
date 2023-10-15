@@ -2,6 +2,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            overflow: hidden;
         }
         
         .card {
@@ -36,37 +37,15 @@
             border: solid 2px black;
         }
         
-        .name {
-            font-size: 20px;
+        .card .colscontainer .leftcol .info .name {
             font-weight: bold;
-            text-align: center;
+            font-size: 1.2rem;
         }
         
-        .studentid {
-            font-size: 16px;
-            text-align: center;
-        }
-        
-        .course {
-            font-size: 16px;
-            text-align: center;
-        }
-        
-        .info {
-            margin-top: 15%;
-            position: relative;
-        }
-        
-        .table {
-            width: 30%;
-            background-color: #F0F5F9;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 20px;
-            padding: 20px;
-            box-shadow: 2px 5px 8px 0px #1E2022;
-            font-family: 'Times new roman', sans-serif;
+        .card .colscontainer .leftcol .info {
+            margin-top: 50px;
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
         
         .card .colscontainer .leftcol {

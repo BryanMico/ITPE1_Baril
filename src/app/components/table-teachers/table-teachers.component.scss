@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 
 .card {
@@ -36,25 +37,15 @@ img {
     border: solid 2px black;
 }
 
-.name {
-    font-size: 20px;
+.card .colscontainer .leftcol .info .name {
     font-weight: bold;
-    text-align: center;
+    font-size: 1.2rem;
 }
 
-.studentid {
-    font-size: 16px;
-    text-align: center;
-}
-
-.course {
-    font-size: 16px;
-    text-align: center;
-}
-
-.info {
-    margin-top: 15%;
-    position: relative;
+.card .colscontainer .leftcol .info {
+    margin-top: 50px;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .table {
