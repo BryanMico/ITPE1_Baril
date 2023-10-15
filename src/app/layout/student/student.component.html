@@ -14,5 +14,8 @@
                 </span></button>
         </div>
     </div>
+    <div class="table">
+        <app-tablestudent *ngFor="let item of studentData" studentImg={{item.studentImg}} Name={{item.Name}}> </app-tablestudent>
+    </div>
 
 </div>

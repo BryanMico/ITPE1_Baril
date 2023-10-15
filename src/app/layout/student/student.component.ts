@@ -26,6 +26,8 @@ export class StudentComponent implements OnInit {
     }
     this.currentStudent = this.studentData[this.currentStudentIndex];
   }
+
+
   ngOnInit(): void {
   }
 

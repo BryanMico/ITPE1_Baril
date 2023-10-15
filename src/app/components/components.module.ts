@@ -4,10 +4,13 @@ import { CardsComponent } from './cards/cards.component';
 import { ButtonComponent } from './button/button.component';
 import { TableComponent } from './table/table.component';
 import { TableTeachersComponent } from './table-teachers/table-teachers.component';
+import { TablestudentComponent } from './tablestudent/tablestudent.component';
+import { Tableteachers2Component } from './tableteachers2/tableteachers2.component';
+
 
 
 @NgModule({
-  declarations: [CardsComponent, ButtonComponent, TableComponent, TableTeachersComponent],
+  declarations: [CardsComponent, ButtonComponent, TableComponent, TableTeachersComponent, TablestudentComponent, Tableteachers2Component],
   imports: [
     CommonModule,
 
@@ -16,7 +19,9 @@ import { TableTeachersComponent } from './table-teachers/table-teachers.componen
     CardsComponent,
     ButtonComponent,
     TableComponent,
-    TableTeachersComponent
+    TableTeachersComponent,
+    TablestudentComponent,
+    Tableteachers2Component
   ]
 })
 export class ComponentsModule { }

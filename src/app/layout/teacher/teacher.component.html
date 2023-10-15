@@ -12,4 +12,6 @@
             arrow_forward_ios
             </span></button>
     </div>
-</div>
+    <div class="table">
+        <app-tableteachers2 *ngFor="let item of teachersData" teachersImg={{item.teachersImg}} teacherName={{item.teacherName}}> </app-tableteachers2>
+    </div>
