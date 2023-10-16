@@ -1,67 +1,78 @@
 h1 {
-    text-align: center;
+    margin: 20px;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
     color: #1E2022;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.btnContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.btnContainer button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #52616B;
-    color: #fff;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-}
-
-.btnContainer button:hover {
-    background-color: white;
-    color: #333;
-}
-
-.arrow {
-    font-weight: bold;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-right: 20px;
-}
-
-.cards {
-    width: 50%;
-}
-
-.table {
-    background-color: #52616B;
+.studentCardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    overflow: hidden;
     margin: 10px;
-    height: 70vh;
-    flex: 1;
+}
+
+.studentCardContainer .studentCard {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    border: solid 2px #1E2022;
+    background-color: #F0F5F9;
+    color: #1E2022;
+    padding: 10px;
     position: relative;
     overflow: hidden;
 }
 
-.scroll-container {
-    overflow: hidden;
-    height: 100%;
+.studentCardContainer .studentCard .studentImg img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
-.table:hover .scroll-container {
-    overflow: auto;
+.studentCardContainer .studentCard .studentInfo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+    position: absolute;
+    font-size: 0.8rem;
+    top: 0;
+}
+
+.btnDetails {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+}
+
+.btnDetails button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2022;
+    max-height: 20px;
+    max-width: 100%;
+    color: #F0F5F9;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.5rem;
+}
+
+.btnDetails button:hover {
+    background-color: #F0F5F9;
+    color: #1E2022;
+    border: solid 1px #1E2022;
+}
+
+@media (max-width: 767px) {
+    .studentCardContainer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
 }

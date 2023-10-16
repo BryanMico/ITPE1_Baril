@@ -7,29 +7,21 @@ import { students_Data } from 'src/sharedData/studentsData';
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.scss']
 })
-export class StudentComponent implements OnInit {
+export class StudentComponent {
   studentData = students_Data;
-  currentStudentIndex = 0;
-  currentStudent = this.studentData[this.currentStudentIndex];
+  showDetails: boolean = false;
+  currentStudent: any;
 
-  nextStudent() {
-    this.currentStudentIndex++;
-    if (this.currentStudentIndex >= this.studentData.length) {
-      this.currentStudentIndex = 0;
-    }
-    this.currentStudent = this.studentData[this.currentStudentIndex];
-  }
-  prevStudent() {
-    this.currentStudentIndex--;
-    if (this.currentStudentIndex >= this.studentData.length) {
-      this.currentStudentIndex = 0;
-    }
-    this.currentStudent = this.studentData[this.currentStudentIndex];
+  clickedDetails(student: any) {
+    this.currentStudent = student;
+    this.showDetails = true;
+
   }
 
+  goBackConfirm(value: boolean) {
+    this.showDetails = false;
 
-
-
+  }
   ngOnInit(): void {
   }
 

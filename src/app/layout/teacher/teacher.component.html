@@ -1,23 +1,17 @@
-<h1>
-    Teachers</h1>
-<div class="container">
-    <div class="cards">
-        <div class="cardcontainer">
-            <app-table-teachers teachersImg={{currentTeacher.teachersImg}} teacherName={{currentTeacher.teacherName}} Subject={{currentTeacher.Subject}} teachersID={{currentTeacher.teachersID}}>
-            </app-table-teachers>
+<h1>Teachers Management</h1>
+<div class="teacherCardContainer">
+    <div class="teacherCard" *ngFor="let teacher of teachersData">
+        <div class="teacherImg"><img src="{{teacher.teacherImg}}" alt=""></div>
+        <div class="teacherInfo">
+            <h3>{{teacher.teacherName}}</h3>
+            <p>{{teacher.Subject}}</p>
+            <p>Teacher ID: {{teacher.teacherID}}</p>
         </div>
-        <div class="btnContainer">
-            <button class="btnNext" (click)="prevTeacher()"><span class="material-symbols-outlined">
-                arrow_back_ios
-                </span></button>
-            <button class="btnPrev" (click)="nextTeacher()"><span class="material-symbols-outlined">
-                arrow_forward_ios
-                </span></button>
-        </div>
-    </div>
-    <div class="table">
-        <div class="scroll-container">
-            <app-tableteachers2 *ngFor="let item of teachersData" teachersImg={{item.teachersImg}} teacherName={{item.teacherName}}> </app-tableteachers2>
+        <div class="btnDetails">
+            <button (click)="clickedDetails(teacher)">
+                View Details
+            </button>
         </div>
     </div>
 </div>
+<app-teacher-cards *ngIf="showDetails" [userDetail]="currentTeacher" (goBack)="goBackConfirm($event)"></app-teacher-cards>

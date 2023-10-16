@@ -9,22 +9,18 @@ import { teachers_Data } from 'src/sharedData/teachersData';
 export class TeacherComponent implements OnInit {
 
   teachersData = teachers_Data;
-  currentTeacherIndex = 0;
-  currentTeacher = this.teachersData[this.currentTeacherIndex];
+  showDetails: boolean = false;
+  currentTeacher: any;
 
-  nextTeacher() {
-    this.currentTeacherIndex++;
-    if (this.currentTeacherIndex >= this.teachersData.length) {
-      this.currentTeacherIndex = 0;
-    }
-    this.currentTeacher = this.teachersData[this.currentTeacherIndex];
+  clickedDetails(teacher: any) {
+    this.currentTeacher = teacher;
+    this.showDetails = true;
+
   }
-  prevTeacher() {
-    this.currentTeacherIndex--;
-    if (this.currentTeacherIndex >= this.teachersData.length) {
-      this.currentTeacherIndex = 0;
-    }
-    this.currentTeacher = this.teachersData[this.currentTeacherIndex];
+
+  goBackConfirm(value: boolean) {
+    this.showDetails = false;
+
   }
 
   ngOnInit(): void {

@@ -1,22 +1,17 @@
-<h1>Students</h1>
-<div class="container">
-    <div class="cards">
-        <div class="cardcontainer">
-            <app-table studentImg={{currentStudent.studentImg}} Name={{currentStudent.Name}} Course={{currentStudent.Course}} studentID={{currentStudent.studentID}}>
-            </app-table>
+<h1>Students Management</h1>
+<div class="studentCardContainer">
+    <div class="studentCard" *ngFor="let student of studentData">
+        <div class="studentImg"><img src="{{student.studentImg}}" alt=""></div>
+        <div class="studentInfo">
+            <h3>{{student.studentName}}</h3>
+            <p>{{student.Course}}</p>
+            <p>Student ID: {{student.studentID}}</p>
         </div>
-        <div class="btnContainer">
-            <button class="btnNext" (click)="prevStudent()"><span class="material-symbols-outlined">
-                arrow_back_ios
-                </span></button>
-            <button class="btnPrev" (click)="nextStudent()"><span class="material-symbols-outlined">
-                arrow_forward_ios
-                </span></button>
-        </div>
-    </div>
-    <div class="table">
-        <div class="scroll-container">
-            <app-tablestudent *ngFor="let item of studentData" studentImg={{item.studentImg}} Name={{item.Name}}> </app-tablestudent>
+        <div class="btnDetails">
+            <button (click)="clickedDetails(student)">
+                View Details
+            </button>
         </div>
     </div>
 </div>
+<app-student-cards *ngIf="showDetails" [userDetail]="currentStudent" (goBack)="goBackConfirm($event)"></app-student-cards>
