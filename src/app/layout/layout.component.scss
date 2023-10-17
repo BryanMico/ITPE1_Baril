@@ -1,6 +1,7 @@
 //desktop
 * {
     box-sizing: border-box;
+    font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial, Sans-serif;
 }
 
 body {
@@ -32,36 +33,6 @@ body {
 
 //mediumsizeddevices
 @media (max-width: 800px) {
-    body {
-        max-height: 100dvh;
-        display: grid;
-        grid-template-columns: 50px 1fr;
-        grid-template-rows: 60px 1fr;
-        grid-template-areas: "side header" "side main";
-        background-color: #C9D6DF;
-    }
-    .header {
-        background-color: #3d474e;
-        grid-area: header;
-    }
-    .sidebar {
-        background-color: #1E2022;
-        grid-area: side;
-        min-width: 50px;
-        top: 0;
-        height: 100%;
-        z-index: 1;
-    }
-    .main {
-        background-color: #C9D6DF;
-        grid-area: main;
-        max-height: 100dvh;
-        overflow-y: auto;
-    }
-}
-
-//mobiledevices
-@media (max-width: 412px) {
     body {
         max-height: 100dvh;
         display: grid;

@@ -1,5 +1,5 @@
 h1 {
-    font-family: "Arial", sans-serif;
+    font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial, Sans-serif;
     font-size: 1rem;
     color: #333;
     background-color: #F0F5F9;
@@ -8,6 +8,7 @@ h1 {
     border-radius: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin: 10px;
     box-shadow: 2px 2px 5px 0px #1E2022;
 }
 
@@ -15,9 +16,11 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 25px;
     margin: 20px;
     align-items: baseline;
+    font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial, Sans-serif;
+    position: relative;
 }
 
 .studentCardContainer .studentCard {
@@ -28,6 +31,7 @@ h1 {
     max-height: 250px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+    border: solid 1px #1E2022;
     background-color: #F0F5F9;
     color: #1E2022;
     position: relative;
@@ -62,11 +66,58 @@ h1 {
     font-size: 0.8rem;
 }
 
-.btnDetails {
-    padding: 10px;
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-bottom: 10px;
 }
 
-.btnDetails button {
+.studentCardContainer .status-circle {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    right: 10%;
+    top: 5%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.btnContainer .btnUpdate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #52616B;
+    border-radius: 10px;
+    color: #F0F5F9;
+    background-color: #1E2022;
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.btnContainer .btnDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #52616B;
+    border-radius: 10px;
+    color: #F0F5F9;
+    background-color: #1E2022;
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.btnContainer .btnDelete span {
+    font-size: 1rem;
+}
+
+.btnContainer .btnUpdate span {
+    font-size: 1rem;
+}
+
+.btnContainer .btnDetails {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +133,19 @@ h1 {
     font-size: 0.5rem;
 }
 
-.btnDetails button:hover {
+.btnContainer .btnDetails:hover {
+    background-color: #F0F5F9;
+    color: #1E2022;
+    border: solid 1px #1E2022;
+}
+
+.btnContainer .btnDelete:hover {
+    background-color: #F0F5F9;
+    color: #1E2022;
+    border: solid 1px #1E2022;
+}
+
+.btnContainer .btnUpdate:hover {
     background-color: #F0F5F9;
     color: #1E2022;
     border: solid 1px #1E2022;
