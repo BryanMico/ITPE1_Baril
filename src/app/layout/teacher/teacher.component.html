@@ -1,6 +1,6 @@
 <h1>Teachers Management</h1>
 <div class="teacherCardContainer">
-    <div class="teacherCard" *ngFor="let teacher of teachersData">
+    <div class="teacherCard" *ngFor="let teacher of sortedTeachersData">
         <div class="teacherImg"><img src="{{teacher.teacherImg}}" alt=""></div>
         <div class="teacherInfo">
             <h3>{{teacher.teacherName}}</h3>

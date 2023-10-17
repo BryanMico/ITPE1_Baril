@@ -11,6 +11,7 @@ export class StudentComponent {
   studentData = students_Data;
   showDetails: boolean = false;
   currentStudent: any;
+  sortedStudentData: any[];
 
   clickedDetails(student: any) {
     this.currentStudent = student;
@@ -21,6 +22,13 @@ export class StudentComponent {
   goBackConfirm(value: boolean) {
     this.showDetails = false;
 
+  }
+
+  constructor() {
+    this.sortedStudentData = this.studentData.slice();
+    this.sortedStudentData.sort((a, b) => {
+      return a.studentName.localeCompare(b.studentName);
+    });
   }
   ngOnInit(): void {
   }
