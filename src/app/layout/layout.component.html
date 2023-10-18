@@ -3,19 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
+
     <title>Main Layout</title>
 </head>
 
 <body>
-    <header class="header">
-        <app-topnav></app-topnav>
-    </header>
-    <section class="sidebar">
-        <app-sidenav></app-sidenav>
-    </section>
-    <main class="main">
-        <app-screen></app-screen>
-    </main>
+    <div class="layout">
+        <div class="header-container">
+            <div class="header">
+                <app-topnav></app-topnav>
+            </div>
+        </div>
+        <div class="sidebarContainer">
+            <div class="sidebar">
+                <app-sidenav></app-sidenav>
+            </div>
+        </div>
+        <div class="main">
+            <app-screen></app-screen>
+        </div>
+    </div>
 </body>
 
 </html>

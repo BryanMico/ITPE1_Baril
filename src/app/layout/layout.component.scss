@@ -1,62 +1,61 @@
-//desktop
 * {
     box-sizing: border-box;
-    font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial, Sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: "side header" "side main";
+    font-family: 'Roboto-Regular', 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif;
+    background-color: #f2f2f2;
     margin: -8px;
+}
+
+.layout {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "sidebar header" "sidebar main";
     height: 100vh;
-    overflow: hidden;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.header-container {
+    position: sticky;
+    top: 0;
+    background-color: #3d474e;
+    grid-area: header;
+    z-index: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    background-color: #3d474e;
-    grid-area: header;
-    border: solid 0.5px #F0F5F9;
+    padding: 0;
 }
 
 .sidebar {
     background-color: #1E2022;
-    grid-area: side;
-    border: solid 0.5px #F0F5F9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 2;
+}
+
+.sidebar:hover {
+    width: 250px;
 }
 
 .main {
     background-color: #C9D6DF;
     grid-area: main;
-}
-
-//mediumsizeddevices
-@media (max-width: 800px) {
-    body {
-        max-height: 100dvh;
-        display: grid;
-        grid-template-columns: 50px 1fr;
-        grid-template-rows: 60px 1fr;
-        grid-template-areas: "side header" "side main";
-        background-color: #C9D6DF;
-    }
-    .header {
-        background-color: #3d474e;
-        grid-area: header;
-    }
-    .sidebar {
-        background-color: #1E2022;
-        grid-area: side;
-        min-width: 50px;
-        top: 0;
-        height: 100%;
-        z-index: 1;
-    }
-    .main {
-        background-color: #C9D6DF;
-        grid-area: main;
-        max-height: 100dvh;
-        overflow-y: auto;
-    }
+    padding: 0;
 }

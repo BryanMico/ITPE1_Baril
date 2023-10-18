@@ -9,8 +9,7 @@ import { students_Data } from 'src/sharedData/studentsData';
 export class StudentCardsComponent implements OnInit {
   @Input() userDetail: any;
 
-  @Output()
-  goBack: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() goBack: EventEmitter<boolean> = new EventEmitter<boolean>();
   goBackConfirm(value: boolean) {
     this.goBack.emit(value);
   }

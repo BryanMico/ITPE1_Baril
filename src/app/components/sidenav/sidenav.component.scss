@@ -1,222 +1,91 @@
-//desktop
-@media (min-width: 801px) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        color: #F0F5F9;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #F0F5F9;
+}
+
+body {
+    height: 100%;
+}
+
+.sidecontainer {
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    padding: 10px;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: #1E2022;
+    grid-row: span 2;
+    margin: 10px;
+}
+
+.dashboard a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+@keyframes bounceAnimation {
+    0%,
+    100% {
+        transform: translateY(0);
     }
-    body {
-        display: grid;
-        height: 100vh;
-        background-color: #1E2022;
-    }
-    .sidecontainer {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .logo {
-        display: flex;
-        width: 220px;
-        height: 10vh;
-        margin-left: 10px;
-        background-color: #1E2022;
-        overflow: hidden;
-    }
-    .logo img {
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-    }
-    .dashboard {
-        display: grid;
-        grid-template-rows: 1fr auto;
-        background-color: #1E2022;
-        grid-row: span 2;
-        margin: 10px;
-        position: sticky;
-        top: 0px;
-    }
-    .dashboard a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        padding: 10px;
-    }
-    @keyframes bounceAnimation {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-2px);
-        }
-    }
-    .dashboard a:hover {
-        animation: bounceAnimation 0.5s infinite;
-        background-color: #52616B;
-        border: solid 1px #F0F5F9;
-        border-radius: 2px;
-    }
-    .dashboard a:active,
-    a:focus {
-        animation: bounceAnimation 0.5s infinite;
-        background-color: #52616B;
-        border: solid 1px #F0F5F9;
-        border-radius: 2px;
-    }
-    .dashboard span {
-        padding-right: 20px;
-        white-space: nowrap;
-    }
-    .dashboard ul li {
-        padding-bottom: 50px;
-        list-style: none;
-        font-size: 20px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    50% {
+        transform: translateY(-2px);
     }
 }
 
-//mediumsizedevices
-@media (max-width: 800px) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        color: #F0F5F9;
-    }
-    body {
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        background-color: #1E2022;
-        overflow: hidden;
-    }
-    .sidecontainer {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .logo {
-        height: 1vh;
-        overflow: hidden;
-    }
-    .dashboard {
-        display: grid;
-        grid-template-rows: 1fr auto;
-        background-color: #1E2022;
-        grid-row: span 2;
-        margin: 0 auto;
-    }
-    .dashboard a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        padding-left: 12px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-    @keyframes bounceAnimation {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-2px);
-        }
-    }
-    .dashboard a:hover {
-        animation: bounceAnimation 0.5s infinite;
-        background-color: #52616B;
-    }
-    .dashboard a:active,
-    a:focus {
-        animation: bounceAnimation 0.5s infinite;
-        background-color: #52616B;
-        border-radius: 2px;
-    }
-    .dashboard span {
-        padding-right: 20px;
-        white-space: nowrap;
-    }
-    .dashboard ul li {
-        padding-bottom: 50px;
-        list-style: none;
-        font-size: 20px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+.dashboard a:hover {
+    animation: bounceAnimation 0.5s infinite;
+    background-color: #52616B;
+    border: solid 1px #F0F5F9;
+    border-radius: 2px;
 }
 
-//mobiledevices
-@media (max-width: 412px) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        color: #F0F5F9;
-    }
-    body {
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        background-color: #1E2022;
-        overflow: hidden;
-    }
-    .sidecontainer {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .logo {
-        height: 1vh;
-        overflow: hidden;
-    }
-    .dashboard {
-        display: grid;
-        grid-template-rows: 1fr auto;
-        background-color: #1E2022;
-        grid-row: span 2;
-        margin: 0 auto;
-    }
-    .dashboard a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        padding-left: 12px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-    @keyframes bounceAnimation {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-2px);
-        }
-    }
-    .dashboard a:hover {
-        animation: bounceAnimation 0.5s infinite;
-        background-color: #52616B;
-    }
-    .dashboard a:active,
-    a:focus {
-        animation: bounceAnimation 0.5s infinite;
-        background-color: #52616B;
-        border-radius: 2px;
-    }
-    .dashboard span {
-        padding-right: 20px;
-        white-space: nowrap;
-    }
-    .dashboard ul li {
-        padding-bottom: 50px;
-        list-style: none;
-        font-size: 20px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+.dashboard a:active,
+a:focus {
+    animation: bounceAnimation 0.5s infinite;
+    background-color: #52616B;
+    border: solid 1px #F0F5F9;
+    border-radius: 2px;
+}
+
+.dashboard span {
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+.dashboard ul li {
+    padding-bottom: 50px;
+    list-style: none;
+    font-size: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.dashboard .topLink {
+    padding-top: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+.dashboard .botLink {
+    padding-top: 50px;
+    max-width: 100%;
+    height: auto;
 }
