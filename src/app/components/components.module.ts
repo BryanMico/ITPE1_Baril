@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsComponent } from './cards/cards.component';
 import { ButtonComponent } from './button/button.component';
-import { StudentCardsComponent } from './student-cards/student-cards.component';
-import { TeacherCardsComponent } from './teacher-cards/teacher-cards.component';
+
+import { TableComponent } from './table/table.component';
 
 
 
 
 @NgModule({
-  declarations: [CardsComponent, ButtonComponent, StudentCardsComponent, TeacherCardsComponent],
+  declarations: [CardsComponent, ButtonComponent, TableComponent],
   imports: [
     CommonModule,
 
@@ -17,8 +17,7 @@ import { TeacherCardsComponent } from './teacher-cards/teacher-cards.component';
   exports: [
     CardsComponent,
     ButtonComponent,
-    StudentCardsComponent,
-    TeacherCardsComponent
+    TableComponent
 
   ]
 })

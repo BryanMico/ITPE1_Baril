@@ -1,28 +1,11 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    font-family: 'Roboto-Regular', 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: -8px;
-}
-
 .layout {
-    margin: 0;
+    flex: 1;
     display: grid;
     grid-template-columns: 65px 1fr;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "sidebar header" "sidebar main";
+    background-color: #f2f2f2;
     height: 100vh;
-    transition: grid-template-columns 0.3s ease;
 }
 
 .header-container {
@@ -32,6 +15,7 @@ body {
     grid-area: header;
     z-index: 1;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
 .header {
@@ -57,5 +41,5 @@ body {
 .main {
     background-color: #C9D6DF;
     grid-area: main;
-    padding: 0;
+    flex: 1;
 }

@@ -1,25 +1,16 @@
 <h1>Teachers Management</h1>
-<div class="teacherCardContainer">
-    <div class="teacherCard" *ngFor="let teacher of sortedTeachersData">
-        <div class="teacherImg"><img src="{{teacher.teacherImg}}" alt=""></div>
-        <div class="status-circle" [ngStyle]="{'background-color': teacher.activeStatus ? '#CDFAD5' : '#FF8080'}"></div>
-        <div class="teacherInfo">
-            <h3>{{teacher.teacherName}}</h3>
-        </div>
-        <div class="btnContainer">
-            <button class="btnUpdate">
-                <span class="material-symbols-outlined">
-                    upgrade
-                    </span>
-            </button>
-            <button class="btnDelete">
-                <span class="material-symbols-outlined">
-                    delete
-                    </span>
-            </button>
-            <button class="btnDetails" (click)="clickedDetails(teacher)">
-                View Details
-            </button>
-        </div>
-    </div>
-    <app-teacher-cards *ngIf="showDetails" [userDetail]="currentTeacher" (goBack)="goBackConfirm($event)"></app-teacher-cards>
+
+<div class="teachersTable">
+    <table>
+        <tr>
+            <th class="profileImg">Profile Image</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Year</th>
+            <th>Block</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+    <app-table *ngFor="let teacher of teachersData" userImg={{teacher.teacherImg}} userName={{teacher.teacherName}} userGender={{teacher.teacherGender}} userAge={{teacher.teacherAge}} userYear={{teacher.teacherYear}} userBlock={{teacher.teacherBlock}}> </app-table>
+</div>

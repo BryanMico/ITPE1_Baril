@@ -1,26 +1,17 @@
 <h1>Students Management</h1>
-<div class="studentCardContainer">
-    <div class="studentCard" *ngFor="let student of sortedStudentData">
-        <div class="studentImg"><img src="{{student.studentImg}}" alt=""></div>
-        <div class="status-circle" [ngStyle]="{'background-color': student.activeStatus ? '#CDFAD5' : '#FF8080'}"></div>
-        <div class="studentInfo">
-            <h3>{{student.studentName}}</h3>
-        </div>
-        <div class="btnContainer">
-            <button class="btnUpdate">
-                <span class="material-symbols-outlined">
-                    upgrade
-                    </span>
-            </button>
-            <button class="btnDelete">
-                <span class="material-symbols-outlined">
-                    delete
-                    </span>
-            </button>
-            <button class="btnDetails" (click)="clickedDetails(student)">
-                View Details
-            </button>
-        </div>
 
-    </div>
-    <app-student-cards *ngIf="showDetails" [userDetail]="currentStudent" (goBack)="goBackConfirm($event)"></app-student-cards>
+<div class="studentsTable">
+    <table>
+        <tr>
+            <th class="profileImg">Profile Image</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Year</th>
+            <th>Block</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+    <app-table *ngFor="let student of studentsData" userImg={{student.studentImg}} userName={{student.studentName}} userGender={{student.studentGender}} userAge={{student.studentAge}} userYear={{student.studentYear}} userBlock={{student.studentBlock}}> </app-table>
+
+</div>
